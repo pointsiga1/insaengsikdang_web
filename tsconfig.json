@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@mobile/*": ["src/mobile/*"],
+      "@modules/*": ["src/modules/*"],
+      "@routes/*": ["src/routes/*"],
+      "@src/*": ["src/*"]
+    },
+    "typeRoots": ["./node_modules/@types"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true, // 라이브러리 타입 체크 생략
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "module": "es2020",
+    "moduleResolution": "node",
+    "lib": ["DOM", "ES2020"]
+  },
+  "include": ["src", "src/custom.d.ts"]
+}
