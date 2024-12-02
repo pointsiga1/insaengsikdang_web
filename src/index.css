@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 @font-face {
   font-family: 'SUIT';
   src: url('/fonts/SUIT-Regular.woff2') format('woff2');
@@ -30,3 +42,67 @@
 * {
   font-family: 'SUIT', sans-serif;
 }
+
+body {
+  @apply bg-[#fff9f1];
+}
+
+/* swiper pagination 커스텀 */
+#custom-pagination .swiper-pagination-bullet {
+  @apply w-[6px] h-[6px] bg-white transition-colors opacity-100;
+}
+
+#custom-pagination .swiper-pagination-bullet-active {
+  @apply bg-primary;
+}
+
+/* rc-rate 커스텀 평점 요약*/
+#rate_summary .rc-rate {
+  display: flex;
+  gap: 2px;
+}
+
+#rate_summary .rc-rate-star {
+  margin: 0;
+}
+
+#rate_summary .rc-rate-star-half .rc-rate-star-first,
+#rate_summary .rc-rate-star-full .rc-rate-star-second {
+  color: #f9831f;
+}
+#rate_summary .rc-rate-star-zero > * {
+  color: #dfdfdf;
+}
+
+/* rc-rate 커스텀 리뷰 */
+#review_rate .rc-rate {
+  display: flex;
+  gap: 1px;
+}
+
+#review_rate .rc-rate-star {
+  margin: 0;
+}
+
+#review_rate .rc-rate-star-half .rc-rate-star-first,
+#review_rate .rc-rate-star-full .rc-rate-star-second {
+  color: #ffd56a;
+}
+#review_rate .rc-rate-star-zero > * {
+  color: #dfdfdf;
+}
+
+/* 텍스트 애니메이션 */
+/* @keyframes bounce-custom {
+  0%,
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(-5px) translateX(-50%);
+  }
+}
+
+.animate-bounce-custom {
+  animation: bounce-custom 1.2s ease-in-out infinite;
+} */
