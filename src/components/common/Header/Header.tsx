@@ -13,17 +13,23 @@ export default function Header() {
     pathname === '/';
   // const isReceiptPage = pathname.includes('receipt')
   const isReceiptPage = true
+  const isAccountRegisterPage = pathname === '/accountRegister';
 
   const headerClass = (isShopPage || isReceiptPage) ? '' : 'bg-white';
+  const isHideLeftRightHeader = isShopPage || isReceiptPage || isAccountRegisterPage;
 
   return (
     isHeaderVisible(pathname) && (
       <header
         className={`absolute w-full left-0 flex items-center justify-between h-[50px] px-4 py-[9px] z-10 ${headerClass}`}
       >
-        <HeaderLeft />
+        {
+          !isHideLeftRightHeader && <HeaderLeft />
+        }
         <HeaderCenter />
-        <HeaderRight />
+        {
+          !isHideLeftRightHeader && <HeaderRight />
+        }
       </header>
     )
   );

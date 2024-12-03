@@ -3,14 +3,22 @@ import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
 import path from 'path';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    svgr({
-      include: '**/*.svg',
-    }),
-  ],
+  plugins: [react(), svgr()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+      },
+    },
+  },
+  build: {
+    outDir: 'dist', // Capacitor는 기본적으로 dist 폴더를 사용
+  },
+  server: {
+    port: 8000,
+    host: true, // 네트워크 노출 허용
+  },
   resolve: {
     alias: {
       '@assets': path.resolve(__dirname, 'src/assets'),

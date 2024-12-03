@@ -1,13 +1,13 @@
 import Layout from '@components/common/Layout/Layout';
-import MainPage from '../pages/main';
+import AccountRegisterPage from '@src/pages/accountRegister';
 
 const userRoutes = {
   path: '/',
   element: <Layout />,
   children: [
     {
-      path: '/',
-      element: <MainPage />,
+      path: '/accountRegister',
+      element: <AccountRegisterPage />,
     },]
 };
 

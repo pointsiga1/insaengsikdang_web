@@ -32,12 +32,12 @@ export default function TextInput({
   return (
     <label className='flex flex-col'>
       {children && (
-        <span className={`font-normal mb-1 text-sm text-secondary`}>
+        <span className={`font-normal mb-1 text-sm text-[#666666]`}>
           {children}
         </span>
       )}
       <input
-        className='px-2 border border-[#D3D3D3] h-[40px] text-sm rounded-md focus:border-primary focus:outline-none placeholder:text-[#AAAAAA] placeholder:text-sm w-full'
+        className='px-2 border border-[#D3D3D3] h-[46px] text-black font-normal rounded-md focus:border-primary focus:outline-none placeholder:text-[#AAAAAA] placeholder:text-sm w-full'
         placeholder={placeholder}
         {...register(name || '', {
           required: {

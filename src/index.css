@@ -91,6 +91,9 @@ body {
 #review_rate .rc-rate-star-zero > * {
   color: #dfdfdf;
 }
+.bg-tertiary{
+  background-color: #C0C0C0;
+}
 
 /* 텍스트 애니메이션 */
 /* @keyframes bounce-custom {

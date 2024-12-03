@@ -9,7 +9,7 @@ export default function HeaderCenter() {
 
   return (
     <h1
-      className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold truncate w-60 text-center ${HeaderCenterClass}`}
+      className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-lg font-bold truncate w-60 text-center ${HeaderCenterClass}`}
     >
       {header}
     </h1>
