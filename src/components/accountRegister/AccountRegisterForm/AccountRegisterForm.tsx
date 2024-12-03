@@ -76,7 +76,6 @@ export default function AccountRegisterForm() {
                         <TextInput
                             name={`accountOwner`}
                             placeholder='이름을 입력해주세요'
-                            message='이름을 입력해주세요'
                         >
                             예금주
                         </TextInput>
