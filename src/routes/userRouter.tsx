@@ -6,7 +6,7 @@ const userRoutes = {
   element: <Layout />,
   children: [
     {
-      path: '/',
+      path: '/accountRegister',
       element: <AccountRegisterPage />,
     },]
 };

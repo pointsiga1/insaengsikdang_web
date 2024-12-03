@@ -13,9 +13,10 @@ export default function Header() {
     pathname === '/';
   // const isReceiptPage = pathname.includes('receipt')
   const isReceiptPage = true
-  const isHomePage = pathname === '/';
+  const isAccountRegisterPage = pathname === '/accountRegister';
 
   const headerClass = (isShopPage || isReceiptPage) ? '' : 'bg-white';
+  const isHideLeftRightHeader = isShopPage || isReceiptPage || isAccountRegisterPage;
 
   return (
     isHeaderVisible(pathname) && (
@@ -23,11 +24,11 @@ export default function Header() {
         className={`absolute w-full left-0 flex items-center justify-between h-[50px] px-4 py-[9px] z-10 ${headerClass}`}
       >
         {
-          !isHomePage && <HeaderLeft />
+          !isHideLeftRightHeader && <HeaderLeft />
         }
         <HeaderCenter />
         {
-          !isHomePage && <HeaderRight />
+          !isHideLeftRightHeader && <HeaderRight />
         }
       </header>
     )
