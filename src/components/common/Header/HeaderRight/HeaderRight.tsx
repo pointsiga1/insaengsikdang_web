@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import MenuBar from '@assets/icons/nav/menu_bar.svg';
+import MenuBar from '@assets/icons/nav/menuBar.svg?react';
 // import useAuthVerify from '@hooks/queries/verify';
 // import { useGetCartCountQuery } from '@hooks/queries/cart';
 

@@ -3,7 +3,7 @@ export const VARIANT_CLASS = {
   'primary-outline': 'border-primary border bg-white text-primary',
   secondary: 'bg-secondary text-white',
   'secondary-outline': 'border-secondary border bg-white text-secondary',
-  tertiary: 'bg-tertiary text-black',
+  tertiary: 'bg-tertiary text-white',
   outline: 'border-[#E8E8E8] border bg-white text-secondary',
 };
 

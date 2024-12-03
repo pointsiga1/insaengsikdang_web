@@ -7,9 +7,7 @@ import path from 'path';
 export default defineConfig({
   plugins: [
     react(),
-    svgr({
-      include: '**/*.svg',
-    }),
+    svgr(),
   ],
   resolve: {
     alias: {

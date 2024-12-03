@@ -1,4 +1,4 @@
-import Arrow from '@assets/icons/header/arrow.svg';
+import Arrow from '@assets/icons/header/arrow.svg?react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const pathUtils = (pathname: string) => {
