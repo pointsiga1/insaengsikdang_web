@@ -13,6 +13,7 @@ export default function Header() {
     pathname === '/';
   // const isReceiptPage = pathname.includes('receipt')
   const isReceiptPage = true
+  const isHomePage = pathname === '/';
 
   const headerClass = (isShopPage || isReceiptPage) ? '' : 'bg-white';
 
@@ -21,9 +22,13 @@ export default function Header() {
       <header
         className={`absolute w-full left-0 flex items-center justify-between h-[50px] px-4 py-[9px] z-10 ${headerClass}`}
       >
-        <HeaderLeft />
+        {
+          !isHomePage && <HeaderLeft />
+        }
         <HeaderCenter />
-        <HeaderRight />
+        {
+          !isHomePage && <HeaderRight />
+        }
       </header>
     )
   );
